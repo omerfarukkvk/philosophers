@@ -6,7 +6,7 @@
 /*   By: okavak <okavak@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/14 19:36:41 by okavak            #+#    #+#             */
-/*   Updated: 2022/12/14 21:03:30 by okavak           ###   ########.fr       */
+/*   Updated: 2022/12/16 02:57:47 by okavak           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,7 @@ int	ft_arg_check(int ac, char **av)
 		}
 	}
 	else
-		exit(EXIT_FAILURE);
+		return (0);
 	return (1);
 }
 
@@ -122,5 +122,5 @@ void	ft_mutex_init(t_philo *philo, pthread_mutex_t *forks, \
 		philo[i].death = death;
 		i++;
 	}
-	pthread_mutex_init(philo[i].death, NULL);
+	pthread_mutex_init(philo->death, NULL);
 }

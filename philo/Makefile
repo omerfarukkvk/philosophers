@@ -17,4 +17,7 @@ fclean:clean
 
 re: clean all
 
-.PHONY : all clean fclean re
+norm: 
+	@norminette *.[ch]
+
+.PHONY : all clean fclean re norm
