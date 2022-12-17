@@ -12,19 +12,19 @@
 
 #include "philo.h"
 
-void	ft_create_thread(t_philo *philo, char **av)
+void	ft_create_thread(t_philo *philo)
 {
 	int	i;
 
 	i = 0;
-	while (i < (ft_atol(av[1])))
+	while (i < philo->num_of_philo)
 	{
 		pthread_create(&philo[i].thread, NULL, &ft_philo_loop, &philo[i]);
 		i++;
 		usleep(100);
 	}
 	i = 0;
-	while (i < (ft_atol(av[1])))
+	while (i < philo->num_of_philo)
 	{
 		pthread_join(philo[i].thread, NULL);
 		i++;

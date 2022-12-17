@@ -47,7 +47,7 @@ t_time	ft_get_time_of_ms(void);
 void	ft_mutex_init(t_philo *philo, pthread_mutex_t *forks, \
 			pthread_mutex_t *death);
 void	ft_arg_init(t_philo *philo, int ac, char **av);
-void	ft_create_thread(t_philo *philo, char **av);
+void	ft_create_thread(t_philo *philo);
 void	*ft_philo_loop(void *args);
 void	ft_philo_eat(t_philo *philo);
 void	ft_philo_sleep(t_philo *philo);

@@ -45,7 +45,7 @@ int	main(int ac, char **av)
 		return (0);
 	ft_arg_init(philo, ac, av);
 	ft_mutex_init(philo, forks, death);
-	ft_create_thread(philo, av);
+	ft_create_thread(philo);
 	ft_free(philo, forks, death);
 	return (0);
 }

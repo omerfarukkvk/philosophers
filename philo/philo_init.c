@@ -12,32 +12,6 @@
 
 #include "philo.h"
 
-long	ft_atol(const char *str)
-{
-	int		i;
-	long	nb;
-	int		sign;
-
-	i = 0;
-	nb = 0;
-	sign = 1;
-	while (str[i] == ' ' || str[i] == '\t' || str[i] == '\n' || str[i] == '\v'
-		|| str[i] == '\f' || str[i] == '\r')
-		i++;
-	if (str[i] == '-' || str[i] == '+')
-	{
-		if (str[i] == '-')
-			sign = -1;
-		i++;
-	}
-	while (str[i] >= '0' && str[i] <= '9')
-	{
-		nb = nb * 10 + str[i] - '0';
-		i++;
-	}
-	return (nb * sign);
-}
-
 int	ft_arg_check(int ac, char **av)
 {
 	int	i;
@@ -63,6 +37,32 @@ int	ft_arg_check(int ac, char **av)
 	else
 		return (0);
 	return (1);
+}
+
+long	ft_atol(const char *str)
+{
+	int		i;
+	long	nb;
+	int		sign;
+
+	i = 0;
+	nb = 0;
+	sign = 1;
+	while (str[i] == ' ' || str[i] == '\t' || str[i] == '\n' || str[i] == '\v'
+		|| str[i] == '\f' || str[i] == '\r')
+		i++;
+	if (str[i] == '-' || str[i] == '+')
+	{
+		if (str[i] == '-')
+			sign = -1;
+		i++;
+	}
+	while (str[i] >= '0' && str[i] <= '9')
+	{
+		nb = nb * 10 + str[i] - '0';
+		i++;
+	}
+	return (nb * sign);
 }
 
 void	ft_arg_init(t_philo *philo, int ac, char **av)
