@@ -3,7 +3,7 @@ NAME = philo
 SRCS=$(wildcard *.c)
 
 CC = gcc
-CFLAGS = -pthread -Wall -Wextra -Werror
+CFLAGS = -pthread -Wall -Wextra -Werror #-fsanitize=thread -g
 
 all: $(NAME)
 
