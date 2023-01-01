@@ -6,7 +6,7 @@
 /*   By: okavak <okavak@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/14 19:36:47 by okavak            #+#    #+#             */
-/*   Updated: 2022/12/16 02:15:55 by okavak           ###   ########.fr       */
+/*   Updated: 2023/01/02 00:47:51 by okavak           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ int	main(int ac, char **av)
 	forks = malloc(sizeof(pthread_mutex_t) * ft_atol(av[1]));
 	death = malloc(sizeof(pthread_mutex_t));
 	if (!philo || !forks || !death)
-		return (0);
+		return (1);
 	ft_arg_init(philo, ac, av);
 	ft_mutex_init(philo, forks, death);
 	ft_create_thread(philo);

@@ -17,8 +17,8 @@ void	ft_philo_eat(t_philo *philo)
 	if (ft_check_death(philo))
 		return ;
 	pthread_mutex_lock(philo->left_fork);
-	pthread_mutex_lock(philo->right_fork);
 	ft_philo_print(philo, "has taken a fork", 0);
+	pthread_mutex_lock(philo->right_fork);
 	ft_philo_print(philo, "has taken a fork ", 0);
 	ft_philo_print(philo, "is eating", 0);
 	pthread_mutex_lock(philo->death);
